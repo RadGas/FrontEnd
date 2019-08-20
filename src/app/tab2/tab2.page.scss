@@ -1,0 +1,22 @@
+.example-button-row {
+  margin: 25px;
+  text-align:center;
+  justify-content: center;
+}
+
+.filter , .location {
+  display: inline-flex;
+}
+mat-expansion-panel-header {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+mat-expansion-panel-header:hover{
+  background-color: white !important;
+}
+mat-expansion-panel-header {
+  margin: 20px 0 20px 0;
+}
+mat-expansion-panel.mat-expansion-panel{
+  margin: 5px;
+}

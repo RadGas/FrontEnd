@@ -1,0 +1,16 @@
+
+<ion-content>
+    <div class="example-button-row ">
+      <ion-button class="filter" color="primary" shape="round" routerLink="/tabs/tab3">Filter Gas Stations</ion-button>
+      <ion-button class="location" shape="round"><ion-icon name="pin"></ion-icon></ion-button>
+    </div>
+      <mat-accordion class="cards" *ngFor="let result of results ; let i = index">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <ion-card-title >{{result.Name}}</ion-card-title>
+            </mat-expansion-panel-header>
+            {{result.Address}}
+            </mat-expansion-panel>
+      </mat-accordion>  
+</ion-content>
+

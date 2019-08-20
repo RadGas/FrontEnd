@@ -1,0 +1,41 @@
+.outside-chip{
+  padding: 0px !important;
+  color: white !important;
+}
+
+mat-slider.mat-slider.mat-accent.mat-slider-horizontal.mat-slider-thumb-label-showing{
+  margin-left: 5px;
+}
+
+ion-datetime{
+  font-size: 15px;
+}
+.chipable {
+  color: white;
+  border: none;
+  
+}
+.example-h2 {
+    margin: 10px;
+    color: #3037A4;
+    font-family:"Helvetica Neue",sans-serif;
+    font-weight: bold;
+  }
+.example-button-row {
+  margin: 25px;
+  text-align:center;
+  justify-content: center;
+}
+.example-section {
+  display: inline-flex;
+  padding-left: 9px;
+}
+.amenities-example-section {
+  display: inline-flex;
+  padding-left: 9px;
+  margin: 5px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}

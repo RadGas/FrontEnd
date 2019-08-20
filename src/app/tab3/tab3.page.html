@@ -1,0 +1,61 @@
+<ion-content>
+  <mat-card>
+      <mat-card-content>
+          <h2 class="example-h2">Distance (mi)</h2> 
+          <section class="datetime-example-section" >
+            <ion-datetime displayFormat="M" monthValues="1,2,3,4,5,6,7,8" placeholder="Tap Here"></ion-datetime>
+          </section>
+      </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+        <h2 class="example-h2">Gas Type</h2>
+        <section class="example-section" >
+          <mat-checkbox class="example-margin" [(ngModel)]="regular">Regular</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="mid">Mid</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="premium">Premium</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="diesel">Diesel</mat-checkbox>
+        </section>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="amenities">
+    <mat-card-content>
+      <h2 class="example-h2">Amenities</h2>
+      <section class="a-example-section" >
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Wendys</mat-button-toggle>
+        </section>
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Food</mat-button-toggle>
+        </section>
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Restroom</mat-button-toggle>
+        </section>
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Clean</mat-button-toggle>
+        </section>
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Safe</mat-button-toggle>
+        </section>
+        <section class="amenities-example-section" >
+          <mat-button-toggle class="chipable" value="wendys">Quick</mat-button-toggle>
+        </section>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+    <mat-card class="price">
+      <mat-card-content>
+        <h2 class="example-h2">Price</h2>
+        <section class="example-section" >
+          <mat-slider [max]=5 [thumbLabel]=true [step]= 0.5></mat-slider>
+        </section>
+      </mat-card-content>
+    </mat-card>
+    <div class="example-button-row">
+      <ion-button color="primary" shape="round" fill="outline" routerLink="/tabs/tab3">Clear</ion-button>
+      <ion-button color="primary" shape="round" routerLink="/tabs/tab2">Done</ion-button>      
+    </div>          
+</ion-content>
