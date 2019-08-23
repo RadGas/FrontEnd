@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from '@ionic/angular';
 import {HttpClient} from "@angular/common/http";
+import {zipCode} from "../DataTypes/zipCode";
 
 @Component({
   selector: 'app-tab2',
@@ -13,9 +14,7 @@ export class Tab2Page {
   results : Array<any> = [];
 
   getGasStations(zipCode, gasType){
-    // console.log(this.http.get(`https://secret-fortress-69641.herokuapp.com/api/zipcode/${zipCode}?fuel=${gasType}`).subscribe(val => console.log(val)));
-    return this.http.get(`https://secret-fortress-69641.herokuapp.com/api/zipcode/${zipCode}?fuel=${gasType}`).subscribe(val => {
-      // @ts-ignore
+    return this.http.get<zipCode>(`https://secret-fortress-69641.herokuapp.com/api/zipcode/${zipCode}?fuel=${gasType}`).subscribe(val => {
       const {stations} = val;
       return this.results = stations;
     });
