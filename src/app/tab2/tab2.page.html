@@ -7,9 +7,9 @@
       <mat-accordion class="cards" *ngFor="let result of results ; let i = index">
           <mat-expansion-panel>
             <mat-expansion-panel-header>
-                <ion-card-title >{{result.Name}}</ion-card-title>
+                <ion-card-title >{{result.name}}</ion-card-title>
             </mat-expansion-panel-header>
-            {{result.Address}}
+            {{result.address["line_1"]}}
             </mat-expansion-panel>
       </mat-accordion>  
 </ion-content>
