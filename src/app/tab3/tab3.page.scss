@@ -6,6 +6,9 @@
 mat-slider.mat-slider.mat-accent.mat-slider-horizontal.mat-slider-thumb-label-showing{
   margin-left: 5px;
 }
+.mat-accent.mat-slider-thumb, .mat-accent.mat-slider-thumb-label, .mat-accent.mat-slider-track-fill{
+  background-color:#3037A4 !important;
+}
 
 ion-datetime{
   font-size: 15px;
@@ -35,7 +38,6 @@ ion-datetime{
   padding-left: 9px;
   margin: 5px;
 }
-
 .example-margin {
   margin: 0 10px;
 }

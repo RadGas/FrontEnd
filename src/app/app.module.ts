@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from "@angular/common/http";
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

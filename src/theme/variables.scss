@@ -1,11 +1,17 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import '~@angular/material/theming';
+@include mat-core();
+$custom-theme-primary: mat-palette($mat-indigo, 900);
+$custom-theme-accent:mat-palette($mat-indigo, A100);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+@include angular-material-theme($custom-theme);
 /** Ionic CSS Variables **/
 :root {
   // --ion-background: url("../assets/icon/design.png");
   /** primary **/
-  --ion-color-primary: #3037A4;
+  --ion-color-primary: #1A237E;
   --ion-color-primary-rgb: 48,55,164;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;
@@ -15,7 +21,7 @@
   /** secondary **/
     --ion-color-secondary: #89A1F5;
     --ion-color-secondary-rgb: 137,161,245;
-    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast: #FFF;
     --ion-color-secondary-contrast-rgb: 0,0,0;
     --ion-color-secondary-shade: #798ed8;
     --ion-color-secondary-tint: #95aaf6;

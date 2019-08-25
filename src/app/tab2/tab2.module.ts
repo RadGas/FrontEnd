@@ -6,9 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports: [
+    MatCardModule,
+    MatIconModule,
     MatButtonModule,
     IonicModule,
     CommonModule,

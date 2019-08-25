@@ -10,6 +10,7 @@ import {zipCode} from "../DataTypes/zipCode";
 })
 export class Tab2Page {
 
+  collapsed = true;
 
   results : Array<any> = [];
 
@@ -21,6 +22,7 @@ export class Tab2Page {
 
   }
   constructor(public navCtrl: NavController, private http: HttpClient) {
+    
     this.results = [
       {
         "Name" : " Exxon",
@@ -37,7 +39,7 @@ export class Tab2Page {
         "Address": "123 new 12321 "
       }
     ]
-    this.getGasStations(33018,1);
+    this.getGasStations(33174,1);
   }
 
 }

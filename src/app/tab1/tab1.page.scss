@@ -1,7 +1,26 @@
 
 .example-button-row {
-  text-align:center;
+  display: flex;
+  text-align:left;
   justify-content: center;
+}
+ion-icon.pin {
+  border-style: solid;
+  border-color: #1A237E;
+  border-width: 1px 0px 1px 1px;
+  height: 43px;
+  padding: 0 15px;
+}
+ion-input.input-text {
+  border-style: solid;
+  border-color: #1A237E;
+  border-width: 1px 0px 1px 1px;
+  max-width: 240px;
+}
+
+ion-button.search-button {
+  margin: 0px;
+  height: 45px;
 }
 div.logo{
   padding-top: 60px;
