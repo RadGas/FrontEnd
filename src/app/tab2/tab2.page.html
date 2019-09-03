@@ -1,34 +1,32 @@
-<mat-card class="hi">
+<mat-card class="top-card">
     <mat-card-actions>
-       <button mat-raised-button color="primary" (click)="collapsed=!collapsed">Filter</button>
+       <button class="filter" mat-raised-button color="primary" (click)="collapsed=!collapsed">Filter</button>
     </mat-card-actions>
       <mat-card-content *ngIf="!collapsed">
       <p>This is some example text.</p>
        <p>This text will disappear when you use the action button in the actions bar below.</p>
     </mat-card-content>
+    <ion-button class="location" shape="round"><ion-icon name="pin"></ion-icon></ion-button>
   </mat-card>
 
 
 <ion-content>
-    <!-- <div class="example-button-row ">
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <ion-button class="filter" color="primary" shape="round">Filter</ion-button>
-          </mat-expansion-panel-header>
-            i was clicked!
+  
+  <mat-accordion class="cards" *ngFor="let result of results ; let i = index">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="gas-cards">
+            <ion-card-title color="primary"><b>{{result.name}}</b></ion-card-title>
+        </mat-expansion-panel-header> 
+        <!-- need to include: miles to station, price, ratings with stars, amenities, type gas -->
+        <section class="address">
+          Address: 
+          <p>{{result.address?.line_1}}</p>
+          <p>{{result.address?.locality}}, {{result.address?.region}} {{result.address?.postal_code}}</p>
+        </section>
+        <section class="phone">
+          <p>Phone Number:  {{result.phone}}</p>
+        </section>
         </mat-expansion-panel>
-    </div> -->
-      <ion-button class="location" shape="round"><ion-icon name="pin"></ion-icon></ion-button>
-      <mat-accordion class="cards" *ngFor="let result of results ; let i = index">
-          <mat-expansion-panel>
-            <mat-expansion-panel-header class="gas-cards">
-                <ion-card-title >{{result.name}}</ion-card-title>
-            </mat-expansion-panel-header>
-            Address: {{result.address?.line_1}}
-            {{result.address?.locality}}, {{result.address?.region}}
-            {{result.address?.postal_code}}
-            Phone Number:  {{result.phone}}
-            </mat-expansion-panel>
-      </mat-accordion>  
+  </mat-accordion>  
 </ion-content>
 
