@@ -42,4 +42,9 @@ export class Tab2Page {
     this.getGasStations(33174,1);
   }
 
+  ionViewLoad()
+  {
+    
+  }
+
 }
