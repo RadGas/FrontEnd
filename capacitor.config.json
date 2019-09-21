@@ -1,6 +1,6 @@
 {
   "appId": "com.example.app",
-  "appName": "photo-gallery",
+  "appName": "radgas",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www"
