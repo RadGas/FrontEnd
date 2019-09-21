@@ -3969,6 +3969,8 @@ var Tab2Page = /** @class */ (function () {
             return _this.results = stations;
         });
     };
+    Tab2Page.prototype.ionViewLoad = function () {
+    };
     Tab2Page.ctorParameters = function () { return [
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }

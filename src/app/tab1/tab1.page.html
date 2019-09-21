@@ -5,8 +5,8 @@
     </div>
     <div class="example-button-row">
         <ion-input #martynText class="input-text" placeholder="Search gas prices by zip code..."></ion-input>
-        <ion-icon (click)="Martyntest(martynText.value)" class="pin" name="pin" color="primary"></ion-icon>
-        <ion-button class="search-button" expand="full" routerLink="/tabs/tab2">Search</ion-button>
+        <ion-icon  class="pin" name="pin" color="primary"></ion-icon>
+        <ion-button (onClick)="Martyntest(martynText.value)" class="search-button" expand="full" routerLink="/tabs/tab2">Search</ion-button>
 
     </div>
     <p>Lat: {{ lat }}</p>
