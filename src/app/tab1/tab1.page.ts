@@ -24,8 +24,9 @@ export class Tab1Page {
     .catch( err => console.log(err));
   }
 
-  Martyntest(){
+  Martyntest(input){
     console.log("IS THIS CALLED?");
+    console.log(input + " was passed");
     this.geolocation.getCurrentPosition()
     .then( pos => {
       this.lat=pos.coords.latitude;
