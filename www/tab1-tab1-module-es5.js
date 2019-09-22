@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content padding class=\"container\">\n\n    <div class=\"logo\">\n      <img src=\"../assets/icon/logo.jpeg\">\n    </div>\n    <div class=\"example-button-row\">\n        <ion-input class=\"input-text\" placeholder=\"Search gas prices by zip code...\"></ion-input>\n        <ion-icon onclick={test()} class=\"pin\" name=\"pin\" color=\"primary\"></ion-icon>\n        <ion-button class=\"search-button\" expand=\"full\" routerLink=\"/tabs/tab2\">Search</ion-button>\n\n    </div>\n    <p>Lat: {{ lat }}</p>\n    <p>Long: {{ lng }}</p>\n\n</ion-content>\n"
+module.exports = "<ion-content padding class=\"container\">\n\n    <div class=\"logo\">\n      <img src=\"../assets/icon/logo.jpeg\">\n    </div>\n    <div class=\"example-button-row\">\n        <ion-input #martynText class=\"input-text\" placeholder=\"Search gas prices by zip code...\"></ion-input>\n        <ion-icon (click)=\"Martyntest(martynText.value)\" class=\"pin\" name=\"pin\" color=\"primary\"></ion-icon>\n        <ion-button class=\"search-button\" expand=\"full\" routerLink=\"/tabs/tab2\">Search</ion-button>\n\n    </div>\n    <p>Lat: {{ lat }}</p>\n    <p>Long: {{ lng }}</p>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -96,8 +96,10 @@ var Tab1Page = /** @class */ (function () {
         })
             .catch(function (err) { return console.log(err); });
     };
-    Tab1Page.prototype.test = function () {
+    Tab1Page.prototype.Martyntest = function (input) {
         var _this = this;
+        console.log("IS THIS CALLED?");
+        console.log(input + " was passed");
         this.geolocation.getCurrentPosition()
             .then(function (pos) {
             _this.lat = pos.coords.latitude;

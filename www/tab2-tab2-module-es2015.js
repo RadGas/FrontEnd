@@ -3124,6 +3124,8 @@ let Tab2Page = class Tab2Page {
             return this.results = stations;
         });
     }
+    ionViewLoad() {
+    }
 };
 Tab2Page.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
