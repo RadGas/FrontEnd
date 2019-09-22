@@ -8,6 +8,7 @@ import {zipCode} from "../DataTypes/zipCode";
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
+
 export class Tab2Page {
 
   collapsed = true;

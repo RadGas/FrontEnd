@@ -1,4 +1,3 @@
-
 .mat-card:not([class*=mat-elevation-z]){
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0), 0 2px 2px 0 rgba(0,0,0,0), 0 1px 5px 0 rgba(0,0,0,0);
 }
@@ -16,11 +15,23 @@
   text-align:center;
   justify-content: center;
 }
-
-.filter , .location {
+.nav-bar {
+  position: sticky;
+  bottom: 0;
+  background: #1A237E;
+}
+.price , .name{
   display: inline-flex;
 }
-
+p.price{
+  color: black;
+}
+ion-icon, ion-label{
+  color:white;
+}
+ion-col.sort-button.md.hydrated{
+  border-left: 2px solid white;
+}
 mat-expansion-panel-header.gas-cards {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;

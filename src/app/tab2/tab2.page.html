@@ -1,21 +1,14 @@
-<mat-card class="top-card">
-    <mat-card-actions>
-       <button class="filter" mat-raised-button color="primary" (click)="collapsed=!collapsed">Filter</button>
-    </mat-card-actions>
-      <mat-card-content *ngIf="!collapsed">
-      <p>This is some example text.</p>
-       <p>This text will disappear when you use the action button in the actions bar below.</p>
-    </mat-card-content>
-    <ion-button class="location" shape="round"><ion-icon name="pin"></ion-icon></ion-button>
-  </mat-card>
-
 
 <ion-content>
   
   <mat-accordion class="cards" *ngFor="let result of results ; let i = index">
       <mat-expansion-panel>
         <mat-expansion-panel-header class="gas-cards">
-            <ion-card-title color="primary"><b>{{result.name}}</b></ion-card-title>
+            <ion-card-title color="primary"><p class="name"><b>{{result.name}}</b></p>
+                <p class="price">
+                  $2.90
+                <p>
+            </ion-card-title>
         </mat-expansion-panel-header> 
         <!-- need to include: miles to station, price, ratings with stars, amenities, type gas -->
         <section class="address">
@@ -28,5 +21,23 @@
         </section>
         </mat-expansion-panel>
   </mat-accordion>  
+  <div class="nav-bar">
+    <ion-row> 
+        <ion-col class="filter-button"> 
+      <ion-tab-button tab="filter" routerLink="/tabs/tab3">
+          <ion-icon name="switch"></ion-icon>
+          <ion-label>FILTER</ion-label>
+        </ion-tab-button>
+      </ion-col> 
+      <ion-col class="sort-button"> 
+        <ion-tab-button tab="sort">
+            <ion-icon name="funnel"></ion-icon>
+            <ion-label>SORT BY</ion-label>
+          </ion-tab-button>
+        </ion-col> 
+      </ion-row>
+  </div>
 </ion-content>
+
+
 
